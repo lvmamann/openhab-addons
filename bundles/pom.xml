@@ -712,6 +712,7 @@
     <module>org.openhab.binding.tankerkoenig</module>
         
     <module>org.openhab.binding.tapocontrol</module>
+
     <module>org.openhab.binding.tapoextended</module>
         
     <module>org.openhab.binding.telegram</module>

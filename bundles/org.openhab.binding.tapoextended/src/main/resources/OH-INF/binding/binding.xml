@@ -4,6 +4,7 @@
 	xsi:schemaLocation="https://openhab.org/schemas/binding/v1.0.0 https://openhab.org/schemas/binding-1.0.0.xsd">
 
 	<name>TapoExtended Binding</name>
-	<description>This is the binding for TapoExtended.</description>
+	<description>This binding can control TAPO-SmartHome devices, as well as communicate with devices linked to TAPO Smart
+		Hub.</description>
 
 </binding:binding>

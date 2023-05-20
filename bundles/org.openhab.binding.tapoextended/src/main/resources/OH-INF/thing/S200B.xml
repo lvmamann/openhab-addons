@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="tapoextended"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!-- S200B THING-TYPE (SOCKET) -->
+	<thing-type id="S200B">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="H100"/>
+		</supported-bridge-type-refs>
+
+		<label>S200B SmartButton</label>
+		<description>Tapo Smart Button</description>
+		<channel-groups>
+			<channel-group id="button" typeId="smartButton"/>
+		</channel-groups>
+		<representation-property>macAddress</representation-property>
+
+		<config-description-ref uri="thing-type:tapo:hub-device"/>
+	</thing-type>
+</thing:thing-descriptions>
