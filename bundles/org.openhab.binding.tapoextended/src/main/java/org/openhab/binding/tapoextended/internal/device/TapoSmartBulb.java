@@ -127,6 +127,7 @@ public class TapoSmartBulb extends TapoDevice {
     protected void setColor(HSBType command) {
         HashMap<String, Object> newState = new HashMap<>();
         newState.put(DEVICE_PROPERTY_ON, true);
+        newState.put(DEVICE_PROPERTY_COLORTEMP, 0);
         newState.put(DEVICE_PROPERTY_HUE, command.getHue().intValue());
         newState.put(DEVICE_PROPERTY_SATURATION, command.getSaturation().intValue());
         newState.put(DEVICE_PROPERTY_BRIGHTNES, command.getBrightness().intValue());
