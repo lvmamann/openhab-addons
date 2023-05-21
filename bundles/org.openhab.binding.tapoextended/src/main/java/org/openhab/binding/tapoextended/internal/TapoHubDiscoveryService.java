@@ -128,8 +128,6 @@ public class TapoHubDiscoveryService extends AbstractDiscoveryService implements
     public DiscoveryResult createResult(JsonObject device) {
         TapoHubHandler tapoBridge = this.bridge;
         String deviceModel = getDeviceModel(device);
-        String deviceId = device.get(DEVICE_PROPERTY_ID).getAsString();
-        ;
         String label = getDeviceLabel(device);
         String deviceMAC = device.get(DEVICE_PROPERTY_MAC).getAsString();
         ThingTypeUID thingTypeUID = new ThingTypeUID(BINDING_ID, deviceModel);
@@ -138,7 +136,6 @@ public class TapoHubDiscoveryService extends AbstractDiscoveryService implements
         Map<String, Object> properties = new HashMap<>();
         properties.put(Thing.PROPERTY_VENDOR, DEVICE_VENDOR);
         properties.put(Thing.PROPERTY_MAC_ADDRESS, formatMac(deviceMAC, MAC_DIVISION_CHAR));
-        properties.put("deviceId", deviceId);
         properties.put(Thing.PROPERTY_FIRMWARE_VERSION, device.get(DEVICE_PROPERTY_FW).getAsString());
         properties.put(Thing.PROPERTY_HARDWARE_VERSION, device.get(DEVICE_PROPERTY_HW).getAsString());
         properties.put(Thing.PROPERTY_MODEL_ID, deviceModel);

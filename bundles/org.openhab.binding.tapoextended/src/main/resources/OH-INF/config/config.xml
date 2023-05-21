@@ -20,8 +20,8 @@
 	<config-description uri="thing-type:tapo:hub-device">
 		<parameter name="pollingInterval" type="integer" min="0" max="9999" required="false">
 			<label>Refresh Interval</label>
-			<description>Refresh interval for refreshing the data in seconds. (0=disabled)</description>
-			<default>1</default>
+			<description>Refresh interval for refreshing the data in milliseconds. (0=disabled)</description>
+			<default>500</default>
 			<advanced>true</advanced>
 		</parameter>
 	</config-description>

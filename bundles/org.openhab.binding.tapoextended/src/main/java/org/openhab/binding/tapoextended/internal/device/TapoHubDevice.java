@@ -69,7 +69,7 @@ public abstract class TapoHubDevice extends BaseThingHandler {
         super(thing);
         this.deviceInfo = new TapoDeviceInfo();
         this.uid = getThing().getUID().getAsString();
-        this.deviceId = getThing().getProperties().get("deviceId");
+        this.deviceId = getThing().getProperties().get(Thing.PROPERTY_SERIAL_NUMBER);
     }
 
     /***********************************
@@ -186,7 +186,7 @@ public abstract class TapoHubDevice extends BaseThingHandler {
      */
     protected void startPollingScheduler() {
         int pollingInterval = this.config.pollingInterval;
-        TimeUnit timeUnit = TimeUnit.SECONDS;
+        TimeUnit timeUnit = TimeUnit.MILLISECONDS;
 
         if (pollingInterval > 0) {
             logger.debug("({}) startScheduler: create job with interval : {} {}", uid, pollingInterval, timeUnit);
