@@ -48,12 +48,14 @@ public class TapoThingConstants {
     public static final String DEVICE_L930 = "L930";
     public static final String DEVICE_H100 = "H100";
     public static final String DEVICE_S200B = "S200B";
+    public static final String DEVICE_T100 = "T100";
     public static final String DEVICE_UNIVERSAL = "Test_Device";
 
     /*** LIST OF SUPPORTED DEVICE DESCRIPTIONS ***/
     public static final String DEVICE_DESCRIPTION_BRIDGE = "TapoControl Cloud-Login";
     public static final String DEVICE_DESCRIPTION_HUB = "SmartHub";
     public static final String DEVICE_DESCRIPTION_SMART_BUTTON = "SmartButton";
+    public static final String DEVICE_DESCRIPTION_SMART_MOTION_SENSOR = "SmartMotionSensor";
     public static final String DEVICE_DESCRIPTION_SMART_PLUG = "SmartPlug";
     public static final String DEVICE_DESCRIPTION_WHITE_BULB = "White-Light-Bulb";
     public static final String DEVICE_DESCRIPTION_COLOR_BULB = "Color-Light-Bulb";
@@ -75,12 +77,14 @@ public class TapoThingConstants {
     public static final ThingTypeUID L930_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_L930);
     public static final ThingTypeUID H100_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_H100);
     public static final ThingTypeUID S200B_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_S200B);
+    public static final ThingTypeUID T100_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_T100);
     public static final ThingTypeUID UNIVERSAL_THING_TYPE = new ThingTypeUID(BINDING_ID, DEVICE_UNIVERSAL);
 
     /*** SET OF SUPPORTED UIDS ***/
     public static final Set<ThingTypeUID> SUPPORTED_BRIDGE_UIDS = Set.of(BRIDGE_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_HUB_UIDS = Set.of(HUB_BRIDGE_THING_TYPE, H100_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_SMART_BUTTONS_UIDS = Set.of(S200B_THING_TYPE);
+    public static final Set<ThingTypeUID> SUPPORTED_SMART_MOTION_SENSORS_UIDS = Set.of(T100_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_SMART_PLUG_UIDS = Set.of(P100_THING_TYPE, P105_THING_TYPE,
             P110_THING_TYPE, P115_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_WHITE_BULB_UIDS = Set.of(L510_THING_TYPE, L610_THING_TYPE);
@@ -88,16 +92,18 @@ public class TapoThingConstants {
     public static final Set<ThingTypeUID> SUPPORTED_LIGHT_STRIP_UIDS = Set.of(L900_THING_TYPE, L920_THING_TYPE,
             L930_THING_TYPE);
     public static final Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = Collections.unmodifiableSet(Stream
-            .of(SUPPORTED_BRIDGE_UIDS, SUPPORTED_HUB_UIDS, SUPPORTED_SMART_BUTTONS_UIDS, SUPPORTED_SMART_PLUG_UIDS,
-                    SUPPORTED_WHITE_BULB_UIDS, SUPPORTED_COLOR_BULB_UIDS, SUPPORTED_LIGHT_STRIP_UIDS)
+            .of(SUPPORTED_BRIDGE_UIDS, SUPPORTED_HUB_UIDS, SUPPORTED_SMART_BUTTONS_UIDS,
+                    SUPPORTED_SMART_MOTION_SENSORS_UIDS, SUPPORTED_SMART_PLUG_UIDS, SUPPORTED_WHITE_BULB_UIDS,
+                    SUPPORTED_COLOR_BULB_UIDS, SUPPORTED_LIGHT_STRIP_UIDS)
             .flatMap(Set::stream).collect(Collectors.toSet()));
     /*** THINGS WITH ENERGY DATA ***/
     public static final Set<ThingTypeUID> SUPPORTED_ENERGY_DATA_UIDS = Set.of(P110_THING_TYPE, P115_THING_TYPE);
 
     /*** THINGS WITH CHANNEL GROUPS ***/
     public static final Set<ThingTypeUID> CHANNEL_GROUP_THING_SET = Collections.unmodifiableSet(Stream
-            .of(SUPPORTED_BRIDGE_UIDS, SUPPORTED_HUB_UIDS, SUPPORTED_SMART_BUTTONS_UIDS, SUPPORTED_SMART_PLUG_UIDS,
-                    SUPPORTED_WHITE_BULB_UIDS, SUPPORTED_COLOR_BULB_UIDS, SUPPORTED_LIGHT_STRIP_UIDS)
+            .of(SUPPORTED_BRIDGE_UIDS, SUPPORTED_HUB_UIDS, SUPPORTED_SMART_BUTTONS_UIDS,
+                    SUPPORTED_SMART_MOTION_SENSORS_UIDS, SUPPORTED_SMART_PLUG_UIDS, SUPPORTED_WHITE_BULB_UIDS,
+                    SUPPORTED_COLOR_BULB_UIDS, SUPPORTED_LIGHT_STRIP_UIDS)
             .flatMap(Set::stream).collect(Collectors.toSet()));
 
     /*** DEVICE PROPERTY STRINGS (CLOUD) ***/

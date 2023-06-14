@@ -27,6 +27,7 @@ import org.openhab.binding.tapoextended.internal.device.TapoHubHandler;
 import org.openhab.binding.tapoextended.internal.device.TapoLightStrip;
 import org.openhab.binding.tapoextended.internal.device.TapoSmartBulb;
 import org.openhab.binding.tapoextended.internal.device.TapoSmartButton;
+import org.openhab.binding.tapoextended.internal.device.TapoSmartMotionSensor;
 import org.openhab.binding.tapoextended.internal.device.TapoSmartPlug;
 import org.openhab.binding.tapoextended.internal.device.TapoUniversalDevice;
 import org.openhab.core.thing.Bridge;
@@ -117,6 +118,8 @@ public class TapoExtendedHandlerFactory extends BaseThingHandlerFactory {
             return new TapoLightStrip(thing);
         } else if (SUPPORTED_SMART_BUTTONS_UIDS.contains(thingTypeUID)) {
             return new TapoSmartButton(thing);
+        } else if (SUPPORTED_SMART_MOTION_SENSORS_UIDS.contains(thingTypeUID)) {
+            return new TapoSmartMotionSensor(thing);
         } else if (thingTypeUID.equals(UNIVERSAL_THING_TYPE)) {
             return new TapoUniversalDevice(thing);
         }

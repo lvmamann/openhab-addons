@@ -215,6 +215,8 @@ public class TapoHubDiscoveryService extends AbstractDiscoveryService implements
 
             if (SUPPORTED_SMART_BUTTONS_UIDS.contains(deviceUID)) {
                 deviceLabel = DEVICE_DESCRIPTION_SMART_BUTTON;
+            } else if (SUPPORTED_SMART_MOTION_SENSORS_UIDS.contains(deviceUID)) {
+                deviceLabel = DEVICE_DESCRIPTION_SMART_MOTION_SENSOR;
             }
             return DEVICE_VENDOR + " " + deviceModel + " " + deviceLabel;
         } catch (Exception e) {
