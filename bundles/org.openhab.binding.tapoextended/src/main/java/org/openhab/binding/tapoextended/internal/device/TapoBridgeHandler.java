@@ -13,7 +13,7 @@
 package org.openhab.binding.tapoextended.internal.device;
 
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
@@ -114,7 +114,7 @@ public class TapoBridgeHandler extends BaseBridgeHandler {
      */
     @Override
     public Collection<Class<? extends ThingHandlerService>> getServices() {
-        return Collections.singleton(TapoDiscoveryService.class);
+        return Set.of(TapoDiscoveryService.class);
     }
 
     /**
@@ -259,6 +259,8 @@ public class TapoBridgeHandler extends BaseBridgeHandler {
         if (config.cloudDiscovery) {
             logger.trace("{} discover devicelist from cloud", this.uid);
             deviceList = getDeviceListCloud();
+        } else {
+            logger.info("{} Discovery disabled in bridge settings ", this.uid);
         }
         return deviceList;
     }

@@ -14,7 +14,7 @@
 		<description>Tapo Smart dimmable White-Light-Spot</description>
 		<channel-groups>
 			<channel-group id="actuator" typeId="lightBulb"/>
-			<channel-group id="device" typeId="deviceState"/>
+			<channel-group id="device" typeId="deviceStateS"/>
 		</channel-groups>
 		<representation-property>macAddress</representation-property>
 

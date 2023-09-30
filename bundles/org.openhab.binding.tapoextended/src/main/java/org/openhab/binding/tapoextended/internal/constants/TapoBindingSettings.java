@@ -54,6 +54,9 @@ public class TapoBindingSettings {
     public static final String DEVICE_CMD_GETCHILDREN = "get_child_device_list";
     public static final String DEVICE_CMD_GETTRIGGERLOGS = "get_trigger_logs";
     public static final String DEVICE_CMD_GETENERGY = "get_energy_usage";
-    public static final String DEVICE_CMD_CONTROLCHILD = "control_child";
+    public static final String DEVICE_CMD_CHILD_DEVICE_LIST = "get_child_device_list";
+    public static final String DEVICE_CMD_CONTROL_CHILD = "control_child";
+    public static final String DEVICE_CMD_MULTIPLE_REQ = "multipleRequest";
     public static final String DEVICE_CMD_CUSTOM = "custom_command";
+    public static final String DEVICE_CMD_SET_LIGHT_FX = "set_dynamic_light_effect_rule_enable";
 }
